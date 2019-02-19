@@ -9,7 +9,7 @@ Requirements
 Installation on Development Machine
 -----------------------------------
 
-To run the app on your local machine, you need Python 3+, installed on your computer. If you using pipenv than follow 2nd 1 to 3 steps
+To run the app on your local machine, you need Python 3+, installed on your computer. If you using pipenv than follow 2nd 1 to 5 steps
 
 1.  Create and activate virtualenv:
 
@@ -21,10 +21,24 @@ To run the app on your local machine, you need Python 3+, installed on your comp
         pip install -r requirments/local.txt
 
 
-3.  Create new `.env` file:
+3.  Copy `.env.example` to `.env` file:
+        In terminal
+        ```shell
+        cp .env.example .env
+        ```
 
-        $cp .env.example .env 
-        put all keys in .env file
+        then put all key values in .env file
+
+4.   Migrate
+        ```shell
+        python manage.py migrate
+        ```
+
+5.   Run server 
+        ```shell
+        python manage.py runserver
+        ```
+
 
 If you using pipenv than
 
@@ -36,7 +50,20 @@ If you using pipenv than
         pipenv install -r requirments/local.txt
 
 
-3.  Create new `.env` file:
+3.  Copy `.env.example` to `.env` file:
+        In terminal
+        ```shell
+        cp .env.example .env
+        ```
 
-        $cp .env.example .env
-        
+        then put all key values in .env file
+
+4.   Migrate
+        ```shell
+        python manage.py migrate
+        ```
+
+5.   Run server 
+        ```shell
+        python manage.py runserver
+        ```
